@@ -1,0 +1,30 @@
+/Users/nikunj/PycharmProjects/Sample/venv/bin/python /Users/nikunj/PycharmProjects/Sample/mysql/DataLoader.py
+23/06/07 11:06:07 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+Inserting data into leaseDetails Count : 679
+Inserting data into leaseSales Count : 5614
+Inserting data into leaseTrans Count : 679
+leaseDetails Table Data Count
++--------+
+|count(1)|
++--------+
+|     679|
++--------+
+
+leaseSales Table Data Count
++--------+
+|count(1)|
++--------+
+|    5614|
++--------+
+
+leaseTrans Table Data Count
++--------+
+|count(1)|
++--------+
+|     679|
++--------+
+
+
+Process finished with exit code 0
