@@ -15,8 +15,6 @@ if __name__ == '__main__':
     leaseTrans = spark.read.csv("/Users/nikunj/Downloads/DE_Assignment/Data/LeaseTrans/*.csv", header=True)
 
     leaseDetail.write\
-        .option("url", "jdbc:hive2://localhost:10000/assignment") \
-        .option('driver', 'org.apache.hive.jdbc.HiveDriver') \
         .mode("APPEND").saveAsTable("assignment.leaseDetail")
     leaseSales.write\
         .mode("APPEND").saveAsTable("assignment.leaseSales")
