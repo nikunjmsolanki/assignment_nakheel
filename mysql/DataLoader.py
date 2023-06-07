@@ -2,7 +2,6 @@ import configparser
 
 from pyspark.sql import SparkSession
 
-
 def checkTableDataCount(spark, MYSQL_DRIVER, DB_URL, DB_USER, tableName):
     print(tableName + " Table Data Count ")
     tables = spark.read \
@@ -13,7 +12,6 @@ def checkTableDataCount(spark, MYSQL_DRIVER, DB_URL, DB_USER, tableName):
         .option("user", DB_USER) \
         .load()
     tables.show()
-
 
 if __name__ == '__main__':
     config = configparser.ConfigParser()
@@ -28,8 +26,6 @@ if __name__ == '__main__':
         .appName("SparkByExamples.com") \
         .config("spark.jars", "mysql-connector-j-8.0.33.jar") \
         .getOrCreate()
-
-    # checkTables(spark, MYSQL_DRIVER, DB_URL, DB_USER)
 
     leaseDetail = spark.read.csv("../inputFiles/LeaseDetails/*.csv", header=True)
     leaseSales = spark.read.csv("../inputFiles/LeaseSales/*.csv", header=True)
