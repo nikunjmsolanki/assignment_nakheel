@@ -10,9 +10,9 @@ if __name__ == '__main__':
 
     spark.sql("CREATE DATABASE IF NOT EXISTS assignment")
 
-    leaseDetail = spark.read.csv("/Users/nikunj/Downloads/DE_Assignment/Data/LeaseDetails/*.csv", header=True)
-    leaseSales = spark.read.csv("/Users/nikunj/Downloads/DE_Assignment/Data/LeaseSales/*.csv", header=True)
-    leaseTrans = spark.read.csv("/Users/nikunj/Downloads/DE_Assignment/Data/LeaseTrans/*.csv", header=True)
+    leaseDetail = spark.read.csv("../inputFiles/LeaseDetails/*.csv", header=True)
+    leaseSales = spark.read.csv("../inputFiles/LeaseSales/*.csv", header=True)
+    leaseTrans = spark.read.csv("../inputFiles/LeaseTrans/*.csv", header=True)
 
     leaseDetail.write\
         .mode("APPEND").saveAsTable("assignment.leaseDetail")

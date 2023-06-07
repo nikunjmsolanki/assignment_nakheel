@@ -31,9 +31,9 @@ if __name__ == '__main__':
 
     # checkTables(spark, MYSQL_DRIVER, DB_URL, DB_USER)
 
-    leaseDetail = spark.read.csv("/Users/nikunj/Downloads/DE_Assignment/Data/LeaseDetails/*.csv", header=True)
-    leaseSales = spark.read.csv("/Users/nikunj/Downloads/DE_Assignment/Data/LeaseSales/*.csv", header=True)
-    leaseTrans = spark.read.csv("/Users/nikunj/Downloads/DE_Assignment/Data/LeaseTrans/*.csv", header=True)
+    leaseDetail = spark.read.csv("../inputFiles/LeaseDetails/*.csv", header=True)
+    leaseSales = spark.read.csv("../inputFiles/LeaseSales/*.csv", header=True)
+    leaseTrans = spark.read.csv("../inputFiles/LeaseTrans/*.csv", header=True)
 
     print("Inserting data into leaseDetails Count : " + str(leaseDetail.count()))
     print("Inserting data into leaseSales Count : " + str(leaseSales.count()))
